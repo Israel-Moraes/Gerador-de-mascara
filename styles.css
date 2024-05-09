@@ -1,0 +1,35 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+label,
+input,
+textarea,
+select {
+  display: block;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+textarea {
+  resize: vertical;
+}
+
+button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  width: auto;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
