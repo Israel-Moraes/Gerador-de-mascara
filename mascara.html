@@ -1,0 +1,52 @@
+User
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gerador de Máscara</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="logoclaro.png" type="image/png">
+</head>
+<body>
+  <div class="container">
+    <h1><img src="logoclaro.png" alt="Ícone do Gerador de Máscara" style="width: 32px; height: 32px; vertical-align: middle;"> Gerador de Máscara</h1>
+    <form id="maskForm">
+      <label for="arcos">Arcos:</label>
+      <input type="text" id="arcos" name="arcos" placeholder="Digite os arcos" required>
+      <label for="abr">ABR:</label>
+      <input type="text" id="abr" name="abr" placeholder="Digite o ABR" required>
+      <label for="horario">Horário da Falha:</label>
+      <input type="text" id="horario" name="horario" placeholder="Digite o horário da falha" required>
+      <label for="operadora">Operadora:</label>
+      <input type="text" id="operadora" name="operadora" placeholder="Digite a operadora" required>
+      <label for="sistema">Sistema:</label>
+      <select id="sistema" name="sistema" required>
+        <option value="">Selecione o sistema</option>
+        <option value="naoInformado">Não informado</option>
+        <option value="cisco">Cisco</option>
+        <option value="nokia">Nokia</option>
+        <option value="ciena">Ciena</option>
+        <option value="huawei">Huawei</option>
+        <option value="alcatel">Alcatel</option>
+      </select>
+      <label for="trecho">Trecho:</label>
+      <input type="text" id="trecho" name="trecho" placeholder="Digite o trecho" required>
+      <label for="curvas">Possui Curvas:</label>
+      <select id="curvas" name="curvas" required>
+        <option value="nao">Não</option>
+        <option value="sim">Sim</option>
+      </select>
+      <div id="observacaoDiv" style="display: none;">
+        <label for="observacao">Observação:</label>
+        <textarea id="observacao" name="observacao" placeholder="Digite a observação"></textarea>
+      </div>
+      <button type="submit">Gerar Máscara e Copiar</button>
+      <button type="button" id="clearButton">Limpar</button>
+    </form>
+    <div id="output"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
