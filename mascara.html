@@ -5,11 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gerador de Máscara</title>
   <link rel="stylesheet" href="styles.css">
-<link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/9/9c/LogoClaro2017.png" type="image/png">
+  <link rel="icon" href="logoclaro.png" type="image/png">
 </head>
 <body>
   <div class="container">
-    <h1><img src="https://upload.wikimedia.org/wikipedia/commons/9/9c/LogoClaro2017.png" alt="Ícone do Gerador de Máscara" style="width: 32px; height: 32px; vertical-align: middle;"> Gerador de Máscara</h1>
+    <h1><img src="logoclaro.png" alt="Ícone do Gerador de Máscara" style="width: 32px; height: 32px; vertical-align: middle;"> Gerador de Máscara</h1>
     <form id="maskForm">
       <label for="arcos">Arcos:</label>
       <input type="text" id="arcos" name="arcos" placeholder="Digite os arcos" required>
@@ -29,6 +29,12 @@
         <option value="huawei">Huawei</option>
         <option value="alcatel">Alcatel</option>
       </select>
+      <label for="tipoFalha">Tipo de Falha:</label>
+      <select id="tipoFalha" name="tipoFalha" required>
+        <option value="">Selecione o tipo de falha</option>
+        <option value="atenuacao">Atenuação</option>
+        <option value="interrupcao">Interrupção</option>
+      </select>
       <label for="trecho">Trecho:</label>
       <input type="text" id="trecho" name="trecho" placeholder="Digite o trecho" required>
       <label for="curvas">Possui Curvas:</label>
@@ -38,7 +44,7 @@
       </select>
       <div id="observacaoDiv" style="display: none;">
         <label for="observacao">Observação:</label>
-        <textarea id="observacao" name="observacao" placeholder="Digite a observação"></textarea>
+        <textarea id="observacao" name="observacao" placeholder="Caso seja atenuação, informar pontos de atenuação"></textarea>
       </div>
       <button type="submit">Gerar Máscara e Copiar</button>
       <button type="button" id="clearButton">Limpar</button>
